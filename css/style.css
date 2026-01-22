@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* calculator */
+.calculator {
+  width: 100%;
+  max-width: 380px;
+  padding: 20px;
+}
+
+/*header*/
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 12px;
+}
+
+.toggle {
+  text-align: center;
+}
+
+.toggle input {
+  width: 60px;
+}
+
+/*screen*/
+.screen {
+  margin: 20px 0;
+  padding: 25px;
+  font-size: 2.2rem;
+  text-align: right;
+  border-radius: 10px;
+}
+
+/*keypad*/
+.keypad {
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+button {
+  padding: 15px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.reset {
+  grid-column: span 2;
+}
+
+.equal {
+  grid-column: span 2;
+}
+
+/*theme */
+body.theme-1 {
+  background: #3b4664;
+  color: white;
+}
+
+.theme-1 .screen {
+  background: #181f32;
+}
+
+.theme-1 .keypad {
+  background: #252d44;
+}
+
+.theme-1 button {
+  background: #eae3dc;
+}
+
+.theme-1 .del,
+.theme-1 .reset {
+  background: #647299;
+  color: white;
+}
+
+.theme-1 .equal {
+  background: #d13f30;
+  color: white;
+}
+
+/*theme*/
+body.theme-2 {
+  background: #e6e6e6;
+  color: #35352c;
+}
+
+.theme-2 .screen {
+  background: #eeeeee;
+}
+
+.theme-2 .keypad {
+  background: #d3cdcd;
+}
+
+.theme-2 button {
+  background: #e5e4e1;
+}
+
+.theme-2 .del,
+.theme-2 .reset {
+  background: #388187;
+  color: white;
+}
+
+.theme-2 .equal {
+  background: #c85402;
+  color: white;
+}
+
+/*theme*/
+body.theme-3 {
+  background: #17062a;
+  color: #ffe53d;
+}
+
+.theme-3 .screen {
+  background: #1e0836;
+}
+
+.theme-3 .keypad {
+  background: #1e0836;
+}
+
+.theme-3 button {
+  background: #331b4d;
+  color: #ffe53d;
+}
+
+.theme-3 .del,
+.theme-3 .reset {
+  background: #56077c;
+  color: white;
+}
+
+.theme-3 .equal {
+  background: #00decf;
+  color: black;
+}
+
+/*responsive*/
+@media (max-width: 480px) {
+  .calculator {
+    padding: 10px;
+  }
+  button {
+    font-size: 1rem;
+  }
+}
